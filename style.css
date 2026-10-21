@@ -1,0 +1,774 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5fa;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================
+   Header
+========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    background-color: #6699CC;
+}
+
+header h1 {
+    color: white;
+}
+
+.logo {
+    color: #333;
+    text-decoration: none;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.logo span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo strong {
+    display: block;
+    font-size: 18px;
+}
+
+.nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav a {
+    background-color: white;
+    color: #336699;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.nav a:hover {
+    background-color: #FFB347;
+    color: #333;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: white;
+    text-shadow: 2px 2px 5px #333;
+}
+
+.hero-text {
+    padding-left: 45px;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.hero p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero {
+    height: 400px;
+    background-color: #336699;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("image/fuji.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.information {
+    padding: 22px 20px 32px;
+    background-color: white;
+}
+
+.information h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card {
+    color: #333;
+    text-decoration: none;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.garbage {
+    background-color: palegreen;
+}
+
+.train {
+    background-color: #ffd9df;
+}
+
+.useful {
+    background-color: khaki;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.icon {
+    font-size: 28px;
+}
+
+
+/* =========================
+   下層ページ 共通
+========================= */
+.page-title {
+    background-color: #336699;
+    flex-direction: column;
+    gap: 12px;
+    /* ပုံပေါ်က စာသားကို ဖတ်ရလွယ်စေဖို့ */
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 220px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gomi-title {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("image/gomi.jpg");
+}
+
+.info-title {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("image/infor.jpg");
+}
+
+.train-title {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("image/bus.jpg");
+}
+.page-title h1 {
+    margin: 0;
+    font-size: clamp(24px, 4vw, 30px);
+}
+.page-title p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: white;
+    text-decoration: none;
+}
+/* ゴミページ */
+.important {
+    padding: 25px;
+}
+
+.important h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+.basic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.basic-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    background-color: #f7faf8;
+    border-radius: 10px;
+}
+.number {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: #54a66f;
+    color: white;
+    font-weight: bold;
+}
+.basic-item h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+.basic-item p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+}
+.garbage-types {
+    padding: 20px 25px;
+}
+.garbage-types h2 {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+.type-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.type-icon {
+    width: 50px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    font-size: 28px;
+    text-align: center;
+}
+.type-card h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+.type-card p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.burnable {
+    background-color: #fff0f0;
+}
+.non-burnable {
+    background-color: #eeeeee;
+}
+.recycle {
+    background-color: #e8f5ff;
+}
+.note {
+    margin: 10px 25px 25px;
+    padding: 18px;
+    background-color: #fff8df;
+    border-radius: 10px;
+    border-left: 5px solid #e5b83d;
+}
+.note h2 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+.note p {
+    margin: 5px 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+/* =========================
+   電車・バスページ
+========================= */
+.manners {
+    padding: 25px;
+}
+.manners h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+.manner-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: #fff8fa;
+    border-radius: 10px;
+    border: 1px solid #f2dce2;
+}
+.manner-icon {
+    width: 45px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    font-size: 27px;
+    text-align: center;
+}
+.manner-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+.manner-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+}
+.manners-note {
+    margin: 5px 25px 25px;
+    padding: 18px;
+    background-color: #fff0f4;
+    border-radius: 10px;
+}
+.manners-note h2 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+.manners-note p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+}
+/* =========================
+   便利な情報ページ
+========================= */
+.useful-info {
+    padding: 25px;
+}
+.useful-info h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: #fffdf4;
+    border-radius: 10px;
+    border: 1px solid #f0e4b9;
+}
+.info-icon {
+    width: 45px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    font-size: 27px;
+    text-align: center;
+}
+.info-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+.info-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+}
+.info-note {
+    margin: 5px 25px 25px;
+    padding: 18px;
+    background-color: #fff8df;
+    border-radius: 10px;
+}
+.info-note h2 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+.info-note p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+}
+/* =========================
+   戻るボタン
+========================= */
+.back {
+    padding: 5px 25px 30px;
+    text-align: center;
+}
+.back a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28639a;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.back a:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    min-height: 48px;
+    padding: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #28639a;
+    color: white;
+    font-size: 10px;
+}
+
+
+/* =========================
+   スマートフォン
+========================= */
+
+/* Smartphone */
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        height: 230px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 15px;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-left: 0;
+        gap: 8px;
+    }
+
+    .nav a {
+        font-size: 13px;
+        text-align: center;
+        padding: 10px 8px;
+    }
+
+    .hero-text {
+        padding-left: 25px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .important,
+    .garbage-types,
+    .manners,
+    .useful-info {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .note,
+    .manners-note,
+    .info-note {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+}
+
+.nav a:focus-visible,
+.card:focus-visible,
+.back a:focus-visible {
+    outline: 3px solid #FFB347;
+    outline-offset: 3px;
+}
+
+/* 漢字のふりがな */
+ruby {
+    ruby-position: over;
+    ruby-align: center;
+}
+
+rt {
+    font-size: 0.55em;
+    font-weight: normal;
+}
+
+body {
+    line-height: 1.9;
+}
+
+.nav a {
+    line-height: 2;
+}
+
+.page-title h1,
+.hero h1 {
+    line-height: 2;
+}
+
+.logo span,
+.logo strong {
+    line-height: 1.9;
+}
+
+.footer {
+    line-height: 2;
+}
+
+/* ゴミページのカードを見やすくする追加スタイル */
+.important .basic-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.important .basic-item {
+    min-width: 0;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px;
+    background: #fff;
+    border: 2px solid #a6c4df;
+    border-top: 5px solid #336699;
+    border-radius: 12px;
+}
+
+.important .number {
+    background: #285d8e;
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.important .basic-item h3 {
+    color: #244f77;
+    font-size: 17px;
+}
+
+.important .basic-item p {
+    color: #333;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.garbage-types {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.garbage-types h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 2px;
+}
+
+.garbage-types .type-card {
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 22px;
+    margin: 0;
+    border: 2px solid;
+    border-radius: 12px;
+}
+
+.garbage-types .burnable {
+    background: #fff3e6;
+    border-color: #bf651c;
+}
+
+.garbage-types .non-burnable {
+    background: #f0f2f4;
+    border-color: #677580;
+}
+
+.garbage-types .recycle {
+    background: #edf7ef;
+    border-color: #398052;
+}
+
+.garbage-types .type-icon {
+    width: auto;
+    margin: 0;
+    font-size: 36px;
+}
+
+.garbage-types .type-card h3 {
+    color: #282828;
+    font-size: 18px;
+}
+
+.garbage-types .type-card p {
+    color: #333;
+    font-size: 15px;
+    line-height: 2;
+}
+
+@media screen and (max-width: 768px) {
+
+    .important .basic-list,
+    .garbage-types {
+        grid-template-columns: 1fr;
+    }
+
+    .important .basic-item {
+        flex-direction: row;
+    }
+
+    .garbage-types .type-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .garbage-types .type-icon {
+        flex: 0 0 42px;
+        text-align: center;
+    }
+}
+
+/* 地震・避難・自転車の案内 */
+.life-guide {
+    padding: 25px;
+}
+
+.life-guide h2 {
+    margin: 0 0 22px;
+    font-size: 22px;
+    color: #244f77;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.guide-card {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #a6c4df;
+    border-top: 4px solid #336699;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.guide-icon {
+    display: block;
+    font-size: 30px;
+}
+
+.guide-card h3 {
+    margin: 10px 0;
+    color: #244f77;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.guide-card p {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 2.2;
+    overflow-wrap: anywhere;
+}
+
+.guide-tip {
+    margin-top: 18px;
+    padding: 16px 20px;
+    background: #fff4df;
+    border-left: 4px solid #ba691c;
+    border-radius: 8px;
+}
+
+.guide-tip p {
+    margin: 6px 0;
+}
+
+.guide-source {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.guide-source a {
+    color: #205588;
+    text-underline-offset: 4px;
+}
+
+.guide-source a:focus-visible {
+    outline: 3px solid #ba691c;
+    outline-offset: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .life-guide {
+        padding: 22px 18px;
+    }
+
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .life-guide h2 {
+        font-size: 20px;
+    }
+
+    .guide-card {
+        padding: 18px;
+    }
+
+    .nav {
+        width: 100%;
+    }
+}

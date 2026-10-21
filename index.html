@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留学生のためのJAPAN NAVI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo">
+                <span><ruby>留学生<rp>（</rp><rt>りゅうがくせい</rt><rp>）</rp></ruby>のための</span>
+                <strong>JAPAN NAVI</strong>
+            </a>
+            <nav class="nav" aria-label="メインメニュー">
+                <a href="index.html" aria-current="page">ホーム</a>
+                <a href="gomi.html">ゴミの<ruby>出し方<rp>（</rp><rt>だしかた</rt><rp>）</rp></ruby></a>
+                <a href="train.html"><ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>とバスのマナー</a>
+                <a href="information.html"><ruby>便利<rp>（</rp><rt>べんり</rt><rp>）</rp></ruby>な<ruby>情報<rp>（</rp><rt>じょうほう</rt><rp>）</rp></ruby></a>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>
+                        <ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>での<ruby>生活<rp>（</rp><rt>せいかつ</rt><rp>）</rp></ruby>を<br>
+                        もっと<ruby>快適<rp>（</rp><rt>かいてき</rt><rp>）</rp></ruby>に
+                    </h1>
+                    <p><ruby>留学生<rp>（</rp><rt>りゅうがくせい</rt><rp>）</rp></ruby>のための<ruby>情報<rp>（</rp><rt>じょうほう</rt><rp>）</rp></ruby>をまとめました!</p>
+                </div>
+            </section>
+            <!-- Information -->
+            <section class="information">
+
+                <h2>＼ こんな<ruby>情報<rp>（</rp><rt>じょうほう</rt><rp>）</rp></ruby>をお<ruby>届け<rp>（</rp><rt>とどけ</rt><rp>）</rp></ruby>します ／</h2>
+
+                <div class="cards">
+
+                    <!-- Garbage -->
+                    <a href="gomi.html" class="card garbage">
+                        <div class="icon">🧺</div>
+                        <h3>ゴミの<ruby>出し方<rp>（</rp><rt>だしかた</rt><rp>）</rp></ruby></h3>
+                        <span>›</span>
+                    </a>
+
+                    <!-- Train -->
+                    <a href="train.html" class="card train">
+                        <div class="icon">🚃</div>
+                        <h3><ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>とバスのマナー</h3>
+                        <span>›</span>
+                    </a>
+
+                    <!-- Information -->
+                    <a href="information.html" class="card useful">
+                        <div class="icon">ℹ️</div>
+                        <h3><ruby>便利<rp>（</rp><rt>べんり</rt><rp>）</rp></ruby>な<ruby>情報<rp>（</rp><rt>じょうほう</rt><rp>）</rp></ruby></h3>
+                        <span>›</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            © 2025 <ruby>留学生<rp>（</rp><rt>りゅうがくせい</rt><rp>）</rp></ruby>のためのJAPAN NAVI. All rights reserved.
+        </footer>
+
+    </div>
+
+    <script>
+        // ホームの背景写真を4秒ごとに切り替える
+        const hero = document.querySelector(".hero");
+        const photos = ["image/fuji.jpg", "image/fuji5.jpg"];
+        let photoIndex = 0;
+
+        // 写真を先に読み込む
+        photos.forEach((src) => {
+            const image = new Image();
+            image.src = src;
+        });
+
+        setInterval(() => {
+            photoIndex = (photoIndex + 1) % photos.length;
+            hero.style.backgroundImage =
+                `linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("${photos[photoIndex]}")`;
+        }, 4000);
+    </script>
+
+</body>
+
+</html>
