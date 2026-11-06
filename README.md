@@ -13,4 +13,4 @@ HTML・CSS・JavaScript
 ## 制作目的
 留学生が日本で安心して生活できるように、必要な情報をわかりやすくまとめました。
 ## 🌐 Webサイト
-[Japan Naviを見る](ဒီနေရာမှာ ကိုယ့်ဝက်ဘ်ဆိုက် URL ထည့်ပါ)
+[Japan Naviを見る](https://mihtet1211.github.io/it_miya-navi.senmonn/)
